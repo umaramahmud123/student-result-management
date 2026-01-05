@@ -1,0 +1,19 @@
+# Virtual env
+studentenv/
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# DB (local sqlite)
+*.db
+
+# Env files
+.env
+
+# OS/IDE
+.vscode/
+.idea/
+.DS_Store

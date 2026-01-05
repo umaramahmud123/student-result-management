@@ -1,5 +1,14 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
+
+
+class UserCreate(BaseModel):
+    username: str
+    password: str = Field(..., min_length=6, max_length=72)
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
 
 # ---------- STUDENT ----------
 
@@ -66,3 +75,12 @@ class StudentSummary(BaseModel):
     total_score: float
     average_score: float
     grade: str
+
+
+class UserCreate(BaseModel):
+    username: str
+    password: str
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
